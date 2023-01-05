@@ -30,7 +30,7 @@ class WelcomeScreenSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      minimum: const EdgeInsets.only(top: 80, bottom: 24, left: 20, right: 20),
+      minimum: const EdgeInsets.only(top: 20, bottom: 24, left: 20, right: 20),
       child: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,7 +67,24 @@ class WelcomeScreenSmall extends StatelessWidget {
             ),
 
             Container(
-              child: Text("Tim Siber Kebayoran Lama"),
+              child: Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 8.00),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('images/wosm_128px.png', height: 32.0),
+                        Image.asset('images/tunas_128px.png', height: 32.0),
+                        Image.asset('images/dkr_128px.png', height: 32.0),
+                        Image.asset('images/dkrkbylama_128px.png', height: 32.0),
+                      ],
+                    ),
+                  ),
+
+                  Text("Tim Siber Kebayoran Lama"),
+                ],
+              ),
             ),
           ],
         ),
